@@ -1,0 +1,16 @@
+.backgroundColor{
+    background-image: url(../../public/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 730px;
+}
+.model1{
+    position: relative;
+}
+.model2{
+    border : none;
+    position: absolute;
+    top: 207px;
+    right: 721px;
+    width: 95px;
+}

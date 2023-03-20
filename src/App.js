@@ -1,8 +1,9 @@
+import Glass from "./Baitap2React/Glass";
 
 
 function App() {
   return (
-    <div> Hello BC42</div>
+    <Glass />
   );
 }
 
