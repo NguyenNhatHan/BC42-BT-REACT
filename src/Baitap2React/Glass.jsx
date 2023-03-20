@@ -2,13 +2,13 @@ import React, {useState} from 'react'
 import style from './style.module.css'
 
 function Glass() {
-    const [glassUrl, setGlassUrl] = useState(" ")
+    const [glassUrl, setGlassUrl] = useState("")
     return (
         <div className={style.backgroundColor}>
             <h3 className='text-center text-light p-4' style={{ backgroundColor: 'rgba(0,0,0,.5)' }}>TRY GLASSES APP ONLINE</h3>
             <div className='container-fluid mt-5 text-center'>
                 <img className={style.model1} src="./img/model.jpg" alt="" width="220px" height="290px" />
-                <img className={style.model2} src={glassUrl} width="70px" height="35px"></img>
+                <img className={style.model2} style={glassUrl ? {display: "block"} : {display: "none"}} src={glassUrl} width="70px" height="35px"></img>
 
             </div>
             <div className="container mt-4">
