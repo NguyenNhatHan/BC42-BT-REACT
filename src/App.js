@@ -1,8 +1,10 @@
-
+import ShoeShop from "./React3/ShoeShop";
 
 function App() {
   return (
-    <div> Hello BC42</div>
+    <div> 
+      <ShoeShop />
+    </div>
   );
 }
 
