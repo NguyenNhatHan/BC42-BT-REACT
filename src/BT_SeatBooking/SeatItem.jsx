@@ -10,7 +10,8 @@ function SeatItem() {
   const handleClick = (hangghe, soGhe) => {
     dispatch({
       type: 'GHE_DANG_CHON',
-      hangghe, soGhe
+      hangghe, 
+      soGhe,
     })
   }
   return (
