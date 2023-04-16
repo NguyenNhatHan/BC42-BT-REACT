@@ -1,8 +1,10 @@
-
+import SeatMovie from "./BT_SeatBooking/SeatMovie";
 
 function App() {
   return (
-    <div> Hello BC42</div>
+    <div>
+      <SeatMovie />
+    </div>
   );
 }
 
