@@ -13,15 +13,6 @@ function Bill() {
             </tr>
           </thead>
           <tbody>
-            {/* {seatSelected.map((item) => {
-              return (
-                <tr key={item.soGhe}>
-                  <td>{item.soGhe}</td>
-                  <td>{item.gia.toLocaleString()}</td>
-                </tr>
-              )
-            }
-            )} */}
             {seatSelected.length > 0 && seatSelected.map((item) => {
               if(item.length > 0) {
                 return item.map((seat) => {

@@ -179,10 +179,8 @@ const initialState = {
 const seatReducer = (state = initialState, action) => {
   switch (action.type) {
     case "GHE_DANG_CHON": {
-      // tìm index của hàng được chọn
       const indexHang = state.seatList.findIndex((item) => item.hangghe === action.payload.hangghe);
 
-      // tạo mảng danhSachGhe mới
       const danhSachGhe = state.seatList[indexHang].danhSachGhe.map((item) => {
         if (item.soGhe === action.payload.soGhe) {
          if(!item.selected){
@@ -194,7 +192,6 @@ const seatReducer = (state = initialState, action) => {
         return item;
       });
 
-      // tạo mảng seatList mới
       const seatList = state.seatList.map((item) => {
         if (item.hangghe === action.payload.hangghe) {
           return { ...item, danhSachGhe: danhSachGhe };
@@ -202,19 +199,6 @@ const seatReducer = (state = initialState, action) => {
         return item;
       })
 
-      // tìm ghế đang được chọn
-      // const seatBooking = seatList[indexHang].danhSachGhe.find((item) => item.selected === true);
-
-      // const seatSelected = [...state.seatSelected];
-
-      // if(seatBooking.selected){
-      //   seatSelected.push(seatBooking);
-      // } else {
-      //   const index = seatSelected.findIndex((item) => item.soGhe === seatBooking.soGhe);
-      //   seatSelected.splice(index, 1);
-      // }
-
-      // return { ...state, seatSelected, seatList };
       const seatSelected = seatList.map((dsGhe) => {
         return dsGhe.danhSachGhe.filter((item) => {
           if(item.selected){
