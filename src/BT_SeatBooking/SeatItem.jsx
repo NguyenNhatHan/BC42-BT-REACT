@@ -10,15 +10,14 @@ function SeatItem() {
   const handleClick = (hangghe, soGhe) => {
     dispatch({
       type: 'GHE_DANG_CHON',
-      hangghe, 
-      soGhe,
+      payload: {hangghe, soGhe}
     })
   }
   return (
     <div className='seatRow'>
           {seatList.map((item) => {
             return (
-                <div className="row">
+                <div key={item.hangghe} className="row">
                   <span className='hangGhe'>{item.hangghe}</span>
                     {item.danhSachGhe.map((seat) => {
                       return (
